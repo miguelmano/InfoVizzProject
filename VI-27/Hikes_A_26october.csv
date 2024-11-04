@@ -1,0 +1,57 @@
+country_name,length_3d,max_elevation,min_elevation,uphill,downhill,difficulty,duration_hours,moving_time_hours,diff
+All,13703.86,1940.16,1008.28,1052.88,985.59,2.94,6.51,4.3,T3  Difficult Mountain hike
+Albania,14358.54,2487.2,917.57,1501.54,1325.23,3.57,10.23,5.37,T4- High-level Alpine hike
+Andorra,8428.23,2852.2,1914.5,709.63,966.4,3.33,5.23,3.3,T3+ Difficult Mountain hike
+Argentina,6429.0,1936.9,1628.9,322.95,329.25,1.5,3.3,2.45,T1  Valley hike
+Armenia,9373.67,1765.7,1144.37,639.5,158.33,2.67,2.53,1.9,T3  Difficult Mountain hike
+Austria,11589.33,2004.72,1094.51,951.24,836.48,3.17,5.52,3.5,T3+ Difficult Mountain hike
+Belgium,18341.93,614.77,451.43,339.27,338.07,1.33,5.8,5.2,T1  Valley hike
+Bosnia and Herz.,9729.7,2389.4,1624.95,798.5,791.0,3.67,5.4,3.25,T4- High-level Alpine hike
+Bulgaria,9477.72,2454.19,1742.15,625.0,625.92,2.71,5.64,3.61,T3  Difficult Mountain hike
+Canada,10109.75,948.75,407.5,568.0,361.0,1.75,1.8,1.72,T2  Mountain hike
+Chile,11198.07,451.0,60.33,489.6,492.6,2.0,5.5,3.97,T2  Mountain hike
+China,22046.3,2650.0,1789.2,844.2,1049.0,2.0,10.0,6.9,T2  Mountain hike
+Costa Rica,6696.65,1933.25,1638.25,954.55,935.05,2.16,1.25,1.0,T2  Mountain hike
+Croatia,13744.67,1195.83,534.43,765.97,481.73,2.0,5.4,4.03,T2  Mountain hike
+Czechia,11182.21,995.53,687.27,404.78,352.06,1.78,2.24,1.98,T2  Mountain hike
+Ecuador,22321.1,3409.0,2849.1,333.0,780.0,3.33,0.9,0.9,T3+ Difficult Mountain hike
+Faroe Islands,9766.3,470.0,50.4,465.6,419.6,2.0,3.3,2.1,T2  Mountain hike
+France,10707.56,1738.91,1070.55,877.19,692.12,2.3,5.36,3.31,T2  Mountain hike
+Georgia,13929.46,2091.12,1439.21,684.53,624.71,2.22,6.46,4.63,T2  Mountain hike
+Germany,13381.18,1254.65,683.93,669.71,616.48,2.27,4.9,3.47,T2  Mountain hike
+Greece,9044.45,1287.32,614.82,691.44,572.61,2.97,4.65,3.48,T3  Difficult Mountain hike
+Greenland,5991.2,186.6,25.6,163.0,205.3,2.0,2.7,1.7,T2  Mountain hike
+Hungary,10709.9,642.3,119.3,551.3,563.3,3.0,4.1,3.0,T3  Difficult Mountain hike
+Iceland,12235.67,927.34,335.34,639.53,591.09,2.78,8.1,4.22,T3  Difficult Mountain hike
+Ireland,10864.75,705.43,105.77,770.17,674.49,3.53,4.76,3.65,T4- High-level Alpine hike
+Israel,7518.1,873.0,586.1,319.5,319.5,2.0,4.0,2.4,T2  Mountain hike
+Italy,14826.07,2007.71,971.09,1201.84,1147.42,2.84,7.3,4.86,T3  Difficult Mountain hike
+Japan,5997.22,517.5,433.5,129.4,120.65,1.25,0.62,0.62,T1  Valley hike
+Kosovo,14876.75,2507.97,1324.35,1260.6,1175.23,2.33,8.87,5.65,T2  Mountain hike
+Liechtenstein,14648.99,2028.92,1110.5,882.53,1036.47,3.11,6.09,4.22,T3  Difficult Mountain hike
+Monaco,8906.8,574.5,145.3,298.3,478.5,2.0,4.8,3.4,T2  Mountain hike
+Montenegro,10861.3,1397.15,535.45,843.95,867.2,2.66,5.8,3.8,T3  Difficult Mountain hike
+Morocco,9311.08,1945.25,1113.05,904.85,538.92,3.58,3.97,2.78,T4- High-level Alpine hike
+Nepal,22530.17,2075.6,1001.47,1396.13,1090.2,2.33,26.93,7.5,T2  Mountain hike
+Netherlands,12796.8,21.0,1.0,79.1,79.1,1.0,3.2,2.6,T1  Valley hike
+New Zealand,16565.1,1655.5,570.2,1186.25,1181.45,3.66,7.45,6.1,T4- High-level Alpine hike
+North Macedonia,16812.67,2377.68,1368.33,1156.78,1142.88,2.39,7.43,5.8,T2  Mountain hike
+Norway,10924.74,1243.54,583.0,751.37,694.12,2.86,5.48,4.04,T3  Difficult Mountain hike
+Palestine,5178.0,181.4,93.9,128.0,130.9,3.33,2.4,2.0,T3+ Difficult Mountain hike
+Poland,12734.4,1636.8,965.1,725.5,835.4,2.0,6.3,4.4,T2  Mountain hike
+Romania,14010.0,1916.4,1082.43,878.57,1036.1,3.33,4.97,3.53,T3+ Difficult Mountain hike
+Russia,38359.7,2670.5,1642.0,1801.95,887.95,2.0,3.8,3.8,T2  Mountain hike
+San Marino,5129.2,725.0,547.0,216.5,144.5,1.0,3.4,1.7,T1  Valley hike
+Serbia,15562.05,2172.7,1552.25,665.55,670.2,2.0,5.1,3.95,T2  Mountain hike
+Slovakia,13745.15,2568.3,1459.35,1058.1,1101.95,4.0,8.65,3.65,T4 High-level Alpine hike
+Slovenia,5877.6,1663.55,804.7,850.18,579.28,3.0,2.55,1.75,T3  Difficult Mountain hike
+Spain,14992.12,1532.56,814.33,886.75,840.08,2.71,6.49,4.48,T3  Difficult Mountain hike
+Sweden,12207.75,808.97,404.02,251.82,440.58,1.75,10.8,4.78,T2  Mountain hike
+Switzerland,13467.66,2073.93,1103.52,1065.05,997.44,3.24,6.53,4.25,T3+ Difficult Mountain hike
+Tajikistan,8171.1,1635.3,1124.6,549.0,498.7,2.0,4.1,2.9,T2  Mountain hike
+Tanzania,8240.5,2695.8,1886.2,809.6,0.0,3.0,3.8,2.9,T3  Difficult Mountain hike
+Thailand,4977.35,1670.6,1071.05,448.0,602.05,1.5,2.35,1.75,T1  Valley hike
+Turkey,8310.61,1894.02,1358.46,554.5,283.46,2.33,3.79,2.94,T2  Mountain hike
+Turkmenistan,7848.55,954.55,410.45,408.25,541.7,2.0,3.1,1.7,T2  Mountain hike
+United Kingdom,13560.02,713.5,123.74,735.97,708.35,2.63,7.37,4.6,T3  Difficult Mountain hike
+United States of America,11799.98,2092.46,1610.02,682.85,654.48,2.74,2.84,2.28,T3  Difficult Mountain hike

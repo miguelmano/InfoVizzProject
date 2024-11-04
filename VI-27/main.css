@@ -1,0 +1,444 @@
+:root {
+    --border-radius: 25px; /* Define the border radius variable */
+    --border-color: #009c1d; /* You can define other constants too */
+}
+:root {
+    --color-1: #386641;
+    --color-2: #33ff57;
+    --color-3: #3357ff;
+    --color-4: #ff33f9;
+    --color-5: #f9ff33;
+    --color-6: #33f9ff;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and borders are included in element's total width and height */
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensures body takes full height */
+    overflow: hidden; /* Prevents scrolling */
+    font-family: 'Montserrat'; /* Use Montserrat font */
+    
+}
+
+#legend div {
+    color: white; /* Garante que o texto da legenda seja sempre branco */
+}
+
+.Grid {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    
+    grid-template-columns: 1fr 5fr 2fr 3fr;
+    grid-template-rows: 1fr 3fr 3fr;
+    grid-template-areas:
+       "header map map map"
+       "filter1 map map map"
+       "filter2 scatter radar  radar";
+    gap: 10px;
+}
+
+
+.Header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center; /* Center items horizontally */
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    text-align: center; /* Center text */
+}
+.Header__Title {
+    font-size: 35px;
+    font-weight:bold ;
+    margin-bottom: 5px;
+}
+
+.Header__Subtitle {
+    font-size: 16px;
+    color: #757575;
+    font-weight: bold ;
+    margin: 0;
+    padding: 0;
+    line-height: 1; 
+
+}
+.Header__SubSubtitle {
+    font-size: 16px;
+    color: #757575;
+    margin: 0;
+    padding: 0;
+    line-height: 1; 
+}
+
+.Header__Heading {
+    font-size: 35px;
+    color: var(--border-color);
+    margin: 5px 0 0 0; 
+    padding: 0;
+    line-height: 1; 
+}
+.highlighted-text {
+    color: var(--color-1); /* Replace with your chosen color */
+    font-weight: bold; /* Optional: make it bold for emphasis */
+}
+
+
+
+/*------------ filters ------------*/
+.Filter {
+    grid-area: filter1;
+    height: 100%;
+    width: 100%;
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #757575;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Filter2 {
+    grid-area: filter2;
+    width: 100%;
+    width: 100%;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    color: #000000;
+    font-size: 14px;
+    text-transform: capitalize;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+
+}
+
+.slider-container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically within each slider container */
+    align-items: center; /* Center elements horizontally within the container */
+    justify-content: center; /* Center elements vertically within the container */
+    margin-top: 10px;
+    width: 100%; /* Ensure the container takes full width */
+    height: 33%; /* Make each container take a third of the Filter2 height */
+}
+
+#line {
+    stroke: #bbb;
+    stroke-width: 4;
+    stroke-linecap: round;
+}
+
+#range-line {
+    stroke: #386641;
+    stroke-width: 6;
+}
+
+.lower-handle,
+.upper-handle {
+    fill: #386641;
+    cursor: pointer;
+}
+#s_length_SVG,
+#s_alt__SVG,
+#s_diff__SVG {
+    width: 100%; /* Make SVG full width of the container */
+    height: 100%; /* Adjust height as needed */
+}
+
+.lower-value-label,
+.upper-value-label,
+.value-label {
+    font-size: 20px;
+    font-weight: bold;
+    fill: grey;
+    text-anchor: middle;
+    alignment-baseline: middle;
+}
+/*-------country filter-----------*/
+
+.country-select {
+    width: 100%;
+    height:100%;
+    text-align: center;
+    top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 15px;
+    color: #000000;    
+}
+
+.country-select option:checked {
+    background-color: linear-gradient(0deg, #007bff 0%, #007bff 100%);
+    color: white !important;
+}
+
+/*------------ Map ------------*/
+
+.Map {
+    grid-area: map;
+    height: 100%;
+    width: 100%;
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #757575;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Map__SVG {
+    width: 100%;
+    /* Make the SVG take full width of the grid cell */
+    height: 100%;
+    /* Keep height proportional */
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.map-legend {
+    font-size: 12px;
+}
+  
+  .map-legend rect {
+    stroke: black;
+    stroke-width: 0.5px;
+}
+
+/*------------ Podium ------------*/
+
+.Podium {
+    grid-area: podium;
+    height: 100%;
+    width: 100%;
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #757575;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Podium__SVG {
+    width: 100%;
+    height: 100%;
+}
+/*------------ Scatter ------------*/
+
+.Scatter {
+    grid-area: scatter;
+    height: 100%;
+    width: 100%;
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #757575;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Scatter__SVG {
+    width: 100%;
+    height: 100%;
+}
+
+/*-------------- x axis dropdown------------------ */
+.custom-select {
+    display: inline-block;
+    width: 20%;
+    height:5%;
+    position: absolute;
+    bottom:20px;
+    left: 45%;
+}
+
+.custom-select select{
+    appearance: none;
+    /* removes default browser settings */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    border: 2px solid rgb(2, 101, 62);
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: rgb(2, 101, 62);
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.custom-select::after{
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: 20px;
+    transform: translateY(-50%);
+    transform: rotate(180deg);
+    font-size: 12px;
+    color: rgb(2, 101, 62);
+    pointer-events: none;
+}
+
+.custom-select select:focus {
+    border-color: rgb(2, 101, 62)
+}
+
+/*-------------- y axis dropdown------------------ */
+.custom-select-left {
+    width: 20%;
+    height: 5%;
+    position: absolute;
+    top: 10px;
+    left:10px;
+    /* transform: rotate(90deg);  */
+}
+.custom-select-left select{
+    appearance: none;
+    /* removes default browser settings */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    border: 2px solid rgb(2, 101, 62);
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    color:rgb(2, 101, 62);
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.custom-select-left::after{
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 10px;
+    transform: translateY(-50%);
+    /* transform: rotate(90deg); */
+    font-size: 12px;
+    color:rgb(2, 101, 62);
+    pointer-events: none;
+}
+.custom-select-left select:focus {
+    border-color: rgb(2, 101, 62)
+}
+
+/* ---------------Radar---------------- */
+
+.Radar {
+    grid-area: radar;
+    height: 100%;
+    width: 100%;
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+
+    display: flex;
+    color: #757575;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Radar__Legend {
+    width: 32%;
+    height: 100%;
+}
+.Radar_Legend__SVG {
+    width: 100%;
+    height: 100%;
+}
+.Radar_Legend__Rect {
+    border-radius: 10px; /* Rounded corners */
+}
+.Radar_Legend__Text {
+    font-size: 14px;
+    text-anchor: start;
+    alignment-baseline: middle;
+}
+
+.Radar__Chart {
+    width: 68%;
+    height: 100%;
+}
+.Radar__SVG {
+    width: 100%;
+    height: 100%;
+}
+
+/* ---------------MyHike---------------- */
+.My_Hike_Group{
+
+
+}
+.My_hike_rect{
+
+}
+My_hike_top_section{
+    border-radius: var(--border-radius);
+}
+
+
+
+/* ---------------Tooltip---------------- */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+.tooltip{
+    position: absolute;
+    text-align: center;
+    width: auto;
+    padding: 5px;
+    z-index: 10;
+    background: #cbcbcb; /* Background color */
+    border: 4px solid #7fa484; /* Border color */
+    pointer-events: none; /* Prevent mouse events */
+    opacity: 0.8; /* Slightly transparent */
+    border-radius: 10px; /* Rounded corners */
+    transition: visibility 0s, opacity 0.2s ease-in-out; /* Smooth appearance */
+}
+

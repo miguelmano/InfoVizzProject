@@ -1,0 +1,93 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hike Explorer</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="libs\d3.min.js"></script>
+    <script src="main.js" type="module"></script>
+</head>
+
+<body>
+    <div class="tooltip" id="tooltip" style="opacity: 0;"></div>
+    <div class="Dashboard">
+        <div class="Grid">
+            <div class="Header">
+                <h1 class="Header__Title">Hike Explorer</h1>
+                <h2 class="Header__Subtitle">Hikes around the world</h2>
+                <h2 class="Header__SubSubtitle">recorded on <span class="highlighted-text">Hikr.org</span></h2>
+
+            </div>
+            
+            <div class="Map">
+                <svg class="Map__SVG"></svg>
+            </div>
+
+            <div class="Filter1">
+                    <label for="country-filter"></label>
+                       <select id="country-filter"  class="country-select" multiple >
+                       <option value="all">All</option>
+                       <!-- Country options will be populated here -->
+                    </select>
+            </div>
+            <div class="Filter2">
+                <div id="length-slider" class="slider-container">
+                    <svg id="s_length__SVG"></svg> <!-- SVG for Length Slider -->
+                </div>
+                <div id="altitude-slider" class="slider-container">
+                    <svg id="s_alt__SVG"></svg> <!-- SVG for Altitude Slider -->
+                </div>
+                <div id="difficulty-slider" class="slider-container">
+                    <svg id="s_diff__SVG"></svg> <!-- SVG for Difficulty Slider -->
+                </div>
+            </div>
+
+            
+
+            <div class="Scatter">
+                <div class="custom-select">
+                    <select id="attributeSelector">
+                      <option value="length_3d">▼ Length (Km)</option>
+                      <option value="duration_hours">▼ Duration</option>
+                      <option value="max_elevation">▼ Max. Elevation</option>
+                      <option value="min_elevation">▼ Min. Elevation</option>
+                      <option value="uphill">▼ Uphill</option>
+                      <option value="downhill">▼ Downhill</option>
+                    </select>
+                  </div> 
+                  <div class="custom-select-left">
+                    <select id="attributeSelectorLeft">
+                      <option value="moving_time_hours">▼ Moving Time (h)</option>
+                      <option value="length_3d">▼ Length (Km)</option>
+                      <option value="duration_hours">▼ Duration</option>
+                      <option value="max_elevation">▼ Max. Elevation</option>
+                      <option value="min_elevation">▼ Min. Elevation</option>
+                      <option value="uphill">▼ Uphill</option>
+                      <option value="downhill">▼ Downhill</option>
+                    </select>
+                </div> 
+                <svg class="Scatter__SVG">   
+                </svg>
+            </div>
+            <div class="Radar">
+                <div class="Radar__Legend">
+                    <svg class="Radar_Legend__SVG"></svg>
+                </div>
+                <div class="Radar__Chart">
+                    <svg class="Radar__SVG"></svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
